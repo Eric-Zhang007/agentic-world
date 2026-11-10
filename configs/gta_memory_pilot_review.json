@@ -1,0 +1,20 @@
+{
+  "episode_id": "ep_20260921_124218_450d",
+  "agent_id": "agent_000",
+  "segment": "segment_00001",
+  "reference_frame": 0,
+  "target_frames": [120, 143],
+  "dataset_entity_id": "3574744230133772",
+  "reference_rgb_bbox_xyxy": [505, 374, 856, 624],
+  "reviewer": "codex_visual_inspection",
+  "review_scope": "Reference full-resolution RGB and all 24 target frames in a contact sheet; no pixel-level segmentation or hidden-state verification",
+  "visible_appearance": "A dark blue-purple coupe with a dark roof, chrome rear bumper, rectangular rear lights and a rear license plate, seen mainly from behind.",
+  "appearance_continuity": "No obvious body/color identity change in inspected target frames; pose and image lighting can change.",
+  "excluded_objects": "Vehicle occupants and distant entities have not been verified as visible identity references.",
+  "limitations": [
+    "Reference bbox is manually estimated, not a segmentation mask.",
+    "Camera alignment is estimated, not pixel accurate.",
+    "Vehicle detailed damage/doors state is unavailable; no claim of exact state equality.",
+    "One-second pilot verifies sample organization, not long-term memory quality or H3 training length compatibility."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id":"parking_bollard","category":"bollard","width":1280,"height":720,
+  "base_pixel":[49,431],"support_height":0.045,
+  "size_prior":[0.16,0.9,0.16],"color":[0.9,0.8,0.1],
+  "evidence":["Original RGB outputs/gta_pi_loop_20261102/urban/input.png: yellow upright bollard near far-left parking fence, pixel box approximately 40,343,58,433"],
+  "uncertainty":["Manual image anchors","Horizontal support and 0.16m depth are priors; unseen faces unknown","No historical visibility review; candidate only"],
+  "landmarks":[
+    {"local_fraction":[0,-0.5,0],"pixel":[49,431]},
+    {"local_fraction":[0,0.5,0],"pixel":[46,344]}
+  ],
+  "parameters":[
+    {"field":"size","axis":1,"bounds":[0.1,2]}
+  ]
+}

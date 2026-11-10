@@ -1,0 +1,12 @@
+{
+  "reviewed_count": 30,
+  "all_sheets_inspected": true,
+  "rejected": {
+    "0": "Later opaque proxy plane occludes yard and actors visible in RGB",
+    "4": "Oversized foreground vegetation proxy occludes street and actor",
+    "6": "Oversized red proxy body fills foreground in sampled frame",
+    "7": "Large proxy wall covers most of the visible forecourt scene",
+    "18": "Vegetation proxy boxes obscure much of the visible background across frames",
+    "27": "Broad vegetation proxy blocks obscure the visible terrain and actors"
+  }
+}

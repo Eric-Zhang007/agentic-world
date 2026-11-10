@@ -1,0 +1,18 @@
+{
+  "episode_id": "ep_20260921_124218_450d",
+  "agent_id": "agent_001",
+  "segment": "segment_00000",
+  "reference_frame": 32,
+  "target_frames": [136, 159],
+  "dataset_entity_id": "3574744230133762",
+  "category": "person",
+  "reference_rgb_bbox_xyxy": [496, 313, 653, 661],
+  "reviewer": "codex_visual_inspection",
+  "review_scope": "All 24 target RGB frames inspected in a contact sheet; full-resolution reference and sampled RGB/proxy projections inspected.",
+  "visible_appearance": "A short dark-haired person in a red and dark horizontally striped shirt, dark trousers and light shoes, with a narrow brown cloth draped down the back.",
+  "generation_note": "This object is the red agent_001 humanoid in this bundle's whitebox palette; blue identifies the other agent. The proxy is rigid and does not specify exact limb motion.",
+  "appearance_continuity": "Same visible clothing and hair throughout reviewed target frames.",
+  "excluded_objects": "Other people and background objects are not individually approved references in this sample.",
+  "invalid_rgb_regions_xyxy": [[0, 0, 100, 40]],
+  "limitations": ["Approximate manual bbox, not a mask.", "FPS HUD remains in original RGB and must be excluded from supervision using the invalid-region annotation.", "No exact articulated pose or hidden-state equivalence claim."]
+}

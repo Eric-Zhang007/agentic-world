@@ -1,0 +1,23 @@
+Continue the original construction diagnostic. Read configs/codex_construction_bench.txt
+for the original scope and deliverables. Prior calls were interrupted by relay 503
+capacity errors, not a completed experiment. Inspect existing partial artifacts in
+outputs/codex_construction_bench_20261104 before acting. Do not overwrite them or
+rerun propose into an existing directory. Reuse completed candidate geometry where
+valid; finish missing previews separately, or use a new attempt directory if needed.
+Continue rural, urban and harbor with real tool-assisted edits and rendered review.
+Do not read evaluation ground truth. Do not use Pi or generate H3. Preserve old
+worlds. Finish the actual benchmark reports rather than stopping at a plan.
+
+USER CLARIFICATION: This is a bug-discovery suite, not a scoring benchmark.
+Do not optimize an aggregate score or hide hard cases. Find previously unnoticed
+problems in assets, coordinate conversions, camera projection, occlusion, support,
+geometry compilation and the agent correction workflow. A useful result is a
+reproducible failure with source RGB, candidate scene, rendered evidence, suspected
+cause, and a general fix verified on another case. Separate asset/rendering bugs
+from uncertain single-image inference and from unsupported unseen geometry.
+Preserve before/after evidence. Do not treat a blocky fixed-part GTA human as a bug
+just because it is visually coarse: inspect the actual catalog/render path first.
+Do not add scene-specific heuristic patches and call them pipeline fixes.
+Record stage wall times and tool failures, not just successful output.
+First finish one rural diagnostic end to end; then use urban/harbor to test whether
+the discovered issues generalize. Report unfinished cases explicitly. No H3 yet.

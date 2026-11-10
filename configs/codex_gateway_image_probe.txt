@@ -1,0 +1,4 @@
+Gateway diagnostic only. Open the image
+/home/star/agentic_world/outputs/gta_pi_loop_20261102/rural/input.png
+using the image viewing tool. After seeing it, briefly describe the foreground
+and finish with IMAGE_ROUNDTRIP_OK. Do not inspect other files or run experiments.

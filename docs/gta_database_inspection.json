@@ -1,0 +1,120 @@
+[
+  {
+    "path": "input_data\\GTA_0906\\data\\controller.sqlite3",
+    "tables": {
+      "client_assignments": {
+        "schema": "CREATE TABLE client_assignments (\n                    episode_id TEXT NOT NULL,\n                    client_instance_id TEXT NOT NULL,\n                    agent_id TEXT NOT NULL,\n                    PRIMARY KEY (episode_id, client_instance_id),\n                    UNIQUE (episode_id, agent_id),\n                    FOREIGN KEY (episode_id) REFERENCES episodes(episode_id)\n                )",
+        "count": 92,
+        "sample": [
+          {
+            "episode_id": "ep_20260719_132000_6c5d",
+            "client_instance_id": "656f8e71b1f448f3a843b23eb976367e",
+            "agent_id": "agent_000"
+          }
+        ]
+      },
+      "connector_sessions": {
+        "schema": "CREATE TABLE connector_sessions (\n                    episode_id TEXT NOT NULL,\n                    connector_id TEXT NOT NULL,\n                    client_host TEXT NOT NULL,\n                    agent_id TEXT,\n                    registered_at TEXT NOT NULL, role TEXT NOT NULL DEFAULT 'operator', target_agent_id TEXT,\n                    PRIMARY KEY (episode_id, connector_id),\n                    FOREIGN KEY (episode_id) REFERENCES episodes(episode_id)\n                )",
+        "count": 113,
+        "sample": [
+          {
+            "episode_id": "ep_20260725_084243_427c",
+            "connector_id": "c484ad2ad3024665abcf685b7e987410",
+            "client_host": "loopback",
+            "agent_id": "agent_000",
+            "registered_at": "2026-07-25T08:42:48.251489+00:00",
+            "role": "operator",
+            "target_agent_id": null
+          }
+        ]
+      },
+      "episodes": {
+        "schema": "CREATE TABLE episodes (\n                    episode_id TEXT PRIMARY KEY,\n                    state TEXT NOT NULL,\n                    config_json TEXT NOT NULL,\n                    agents_json TEXT NOT NULL,\n                    created_at TEXT NOT NULL,\n                    updated_at TEXT NOT NULL,\n                    reject_reason TEXT\n                )",
+        "count": 97,
+        "sample": [
+          {
+            "episode_id": "ep_20260719_121306_6dff",
+            "state": "REJECTED",
+            "config_json": "{\"schema_version\":\"0.1.0\",\"scenario_id\":\"coop_delivery_v1\",\"seed\":184732,\"expected_agents\":2,\"sample_rate_hz\":20,\"video_fps\":20,\"resolution\":[1280,720],\"duration_sec\":60,\"weather\":\"CLEAR\",\"time_of_day\":\"14:00\",\"traffic_mode\":\"controlled\",\"population_mode\":\"server_managed\",\"routing_bucket\":1,\"metadata\":{}}",
+            "agents_json": "[]",
+            "created_at": "2026-07-19T12:13:06.348411+00:00",
+            "updated_at": "2026-07-19T13:19:47.029955+00:00",
+            "reject_reason": "replaced by single-agent episode"
+          }
+        ]
+      },
+      "heartbeats": {
+        "schema": "CREATE TABLE heartbeats (\n                    episode_id TEXT NOT NULL,\n                    agent_id TEXT NOT NULL,\n                    payload_json TEXT NOT NULL,\n                    received_at TEXT NOT NULL,\n                    PRIMARY KEY (episode_id, agent_id),\n                    FOREIGN KEY (episode_id) REFERENCES episodes(episode_id)\n                )",
+        "count": 88,
+        "sample": [
+          {
+            "episode_id": "ep_20260719_132000_6c5d",
+            "agent_id": "agent_000",
+            "payload_json": "{\"schema_version\":\"0.1.0\",\"agent_id\":\"agent_000\",\"episode_id\":\"ep_20260719_132000_6c5d\",\"last_action_seq\":4054,\"last_video_pts_ns\":null,\"capture_alive\":false,\"disk_free_gb\":null,\"encoder_queue_depth\":null,\"client_monotonic_ms\":212267}",
+            "received_at": "2026-07-19T14:43:45.183220+00:00"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "input_data\\GTA_0906\\data\\ingestor-derivations.sqlite3",
+    "tables": {
+      "jobs": {
+        "schema": "CREATE TABLE jobs (\n                episode_id TEXT PRIMARY KEY, generation INTEGER NOT NULL,\n                completed INTEGER NOT NULL DEFAULT 0, first_pending REAL NOT NULL,\n                due REAL NOT NULL, state TEXT NOT NULL DEFAULT 'pending',\n                attempts INTEGER NOT NULL DEFAULT 0, error TEXT)",
+        "count": 1,
+        "sample": [
+          {
+            "episode_id": "ep_20260914_124047_50fa",
+            "generation": 1,
+            "completed": 1,
+            "first_pending": 1789392231.428628,
+            "due": 1789392236.428628,
+            "state": "complete",
+            "attempts": 0,
+            "error": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "input_data\\GTA_0906\\data\\ingestor.sqlite3",
+    "tables": {
+      "accepted_records": {
+        "schema": "CREATE TABLE accepted_records (\n                    episode_id TEXT NOT NULL,\n                    channel TEXT NOT NULL,\n                    producer_id TEXT NOT NULL,\n                    sample_seq INTEGER NOT NULL,\n                    PRIMARY KEY (episode_id, channel, producer_id, sample_seq)\n                )",
+        "count": 1073401,
+        "sample": [
+          {
+            "episode_id": "ep_20260719_132000_6c5d",
+            "channel": "world_state",
+            "producer_id": "fxserver-main",
+            "sample_seq": 0
+          }
+        ]
+      },
+      "world_clock_domains": {
+        "schema": "CREATE TABLE world_clock_domains (\n                    episode_id TEXT PRIMARY KEY, domain TEXT\n                )",
+        "count": 22,
+        "sample": [
+          {
+            "episode_id": "ep_20260907_084333_329c",
+            "domain": "fxserver:7843c6ffff0f4ceeb4094411e84c8839"
+          }
+        ]
+      },
+      "world_clocks": {
+        "schema": "CREATE TABLE world_clocks (\n                    episode_id TEXT PRIMARY KEY,\n                    sample_seq INTEGER NOT NULL,\n                    server_monotonic_ns INTEGER NOT NULL,\n                    ingestor_received_monotonic_ns INTEGER NOT NULL\n                )",
+        "count": 40,
+        "sample": [
+          {
+            "episode_id": "ep_20260725_084243_427c",
+            "sample_seq": 472,
+            "server_monotonic_ns": 201454850900,
+            "ingestor_received_monotonic_ns": 16080680424900
+          }
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,44 @@
+Run a real tool-assisted whitebox correction experiment, no H3 generation yet.
+You are the Pi GPT agent responsible for the actual scene edits, not a nested agent.
+Work in /home/star/agentic_world/outputs/rural_geometry_assisted_20261104.
+Create this NEW experiment directory; do not alter previous experiments or databases.
+Read /home/star/agentic_world/outputs/gta_pi_loop_20261102/rural/input.png.
+Read the old scene.json and reconstruction_report.json in that same rural directory
+only as a baseline to improve, not ground truth. Do not use dataset whitebox or
+dataset camera calibration. Use the available small-model evidence as follows:
+
+Call world geometry_propose with:
+image=/home/star/agentic_world/outputs/gta_pi_loop_20261102/rural/input.png
+reconstruction=/home/star/agentic_world/outputs/geometry_proposals/rural_same_image_20261104/reconstruction.npz
+perception=/home/star/agentic_world/outputs/geometry_proposals/rural_merged_passes_20261104/result.json
+output=/home/star/agentic_world/outputs/rural_geometry_assisted_20261104/proposal
+actor_height_prior=1.7, plane_threshold=0.005, gpu="2".
+These cached VGGT and detector/SAM outputs are from this exact image. Inspect the
+returned previews, source_candidates and perception JSON/masks. Read the input
+RGB directly too. The raw fast scene is not a correct scene: its NPC is about
+0.925m tall, trees are bulky boxes, and ground support is incomplete. You may use
+either baseline's geometry or a hybrid, but preserve explicit coordinate systems
+and project into the input image correctly. Do not simply copy raw fast geometry.
+
+Correct the scene yourself using this evidence. Priorities: foreground utility
+pole position and width, middle and right building screen footprints, both adult
+actors' screen locations and sizes, reasonable ground support. Keep coarse
+gta_human assets, not detailed limb constraints. Do not invent observations behind
+the camera. Keep inferred/world-created geometry provenance explicit.
+Use world preview to inspect baseline and every revised scene. Read camera and
+overview images explicitly. Up to four revision previews are sufficient for this
+bounded experiment. Build a per-landmark before/after comparison using measured
+screen boxes or centers where detection is reliable. If a detector misses a pole,
+visually annotate that source landmark and label it human/model visual estimate,
+not a detector result. An error reduction in one view does not prove 3D correctness.
+You may write and run a small numerical projection/evaluation script if needed;
+reuse existing camera/projection implementation and document coordinates rather
+than silently guessing conventions. Do not call another paid model/API.
+
+Save scene_before.json, scene_after.json, report.json (actual tool evidence used,
+edits, before/after measurements, remaining failures, geometry_ready true/false)
+and comparison.jpg with source RGB / old GPT / raw fast / corrected scene.
+Do not initialize a database or render H3; this is candidate correction only.
+If the candidate still fails important alignment or support checks, say so, retain
+the best candidate and explain its remaining failures. Finish with paths and
+specific measured improvements and regressions, not a generic success claim.

@@ -1,0 +1,36 @@
+source_shards: E:/GTA_555_upload_no_proxy/shards
+workspace: E:/GTA_555_complete_rebuild_20261025
+source_root: E:/GTA_555_complete_rebuild_20261025/source
+outputs: E:/GTA_555_complete_rebuild_20261025/outputs
+
+expected:
+  shards: 30
+  episodes: 21
+  views: 42
+  pairs: 1992
+
+stages:
+  extract: true
+  verify_source: true
+  render_proxy: true
+  align_clock_camera_world: true
+  build_scene_manifest: true
+  build_training_samples: true
+  visual_review: true
+  package: true
+
+render:
+  # Start with the source's frozen parameters. Do not silently substitute 24fps
+  # or frame-number alignment when source timestamps are available.
+  use_frozen_inputs: true
+  workers: 1
+  gpu: false
+  render_all_pairs: true
+
+training:
+  preserve_existing_training_data: true
+  keep_existing_manifest: true
+  background_fraction: 0.50
+  person_fraction: 0.20
+  vehicle_fraction: 0.20
+  mixed_fraction: 0.10

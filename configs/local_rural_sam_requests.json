@@ -1,0 +1,14 @@
+{
+  "images": [{
+    "image": "outputs/gta_pi_loop_20261102/rural/input.png",
+    "evidence": "Codex manual regions on source RGB; no GT masks. Trunks requested separately from crowns.",
+    "objects": [
+      {"id":"player","category":"person","bbox_xyxy":[506,324,625,624]},
+      {"id":"npc","category":"person","bbox_xyxy":[542,247,634,403]},
+      {"id":"near_utility_pole","category":"pole","bbox_xyxy":[1022,0,1095,294]},
+      {"id":"palm_left_trunk","category":"tree trunk","bbox_xyxy":[479,0,534,225]},
+      {"id":"palm_right_trunk","category":"tree trunk","bbox_xyxy":[894,0,956,224]},
+      {"id":"gun_shop","category":"building","bbox_xyxy":[82,68,360,194]}
+    ]
+  }]
+}

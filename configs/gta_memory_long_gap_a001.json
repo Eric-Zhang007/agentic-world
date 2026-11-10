@@ -1,0 +1,18 @@
+{
+  "episode_id": "ep_20260921_124218_450d",
+  "agent_id": "agent_001",
+  "segment": "segment_00000",
+  "reference_frame": 32,
+  "target_frames": [480, 503],
+  "dataset_entity_id": "3574744230133762",
+  "category": "person",
+  "reference_rgb_bbox_xyxy": [496, 313, 653, 661],
+  "reviewer": "codex_visual_inspection",
+  "review_scope": "All 24 RGB frames inspected in a sheet; reference and first/last projected whitebox comparisons inspected. Longer reference age, not verified disappearance-and-revisit.",
+  "visible_appearance": "A short dark-haired person wearing a red and dark horizontally striped shirt, dark trousers and light shoes, with a narrow brown cloth draped down the back.",
+  "generation_note": "The referenced person is the red agent_001 proxy. No appearance reference is approved for the blue person in this sample.",
+  "appearance_continuity": "Red-shirt person identity remains consistent across reference and target.",
+  "excluded_objects": "Blue person has visibly inaccurate projected position in a sampled frame; not approved as an object reference.",
+  "invalid_rgb_regions_xyxy": [[0, 0, 100, 40]],
+  "limitations": ["Multi-object alignment failure: selected red subject appears broadly aligned, but another subject does not. Exclude from strict full-frame alignment training.", "FPS overlay must be masked by downstream processing.", "Approximately 19-second reference gap does not prove long-term revisit."]
+}

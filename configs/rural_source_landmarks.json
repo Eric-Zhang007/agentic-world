@@ -1,0 +1,17 @@
+{
+  "width":1280, "height":720,
+  "provenance":"Codex visually annotated source RGB; bases of tree trunks and pole, with fixed flat-ground and camera priors",
+  "landmarks":[
+    {"id":"near_utility_pole","local_fraction":[0,-0.5,0],"pixel":[1038,286]},
+    {"id":"palm_left_trunk","local_fraction":[0,-0.5,0],"pixel":[503,222]},
+    {"id":"palm_right_trunk","local_fraction":[0,-0.5,0],"pixel":[913,219]}
+  ],
+  "parameters":[
+    {"id":"near_utility_pole","field":"position","axis":0,"bounds":[1,25]},
+    {"id":"near_utility_pole","field":"position","axis":2,"bounds":[-45,0]},
+    {"id":"palm_left_trunk","field":"position","axis":0,"bounds":[-15,-0.1],"linked_ids":["palm_left_crown"]},
+    {"id":"palm_left_trunk","field":"position","axis":2,"bounds":[-55,-5],"linked_ids":["palm_left_crown"]},
+    {"id":"palm_right_trunk","field":"position","axis":0,"bounds":[1,30],"linked_ids":["palm_right_crown"]},
+    {"id":"palm_right_trunk","field":"position","axis":2,"bounds":[-55,-5],"linked_ids":["palm_right_crown"]}
+  ]
+}

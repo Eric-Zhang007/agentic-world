@@ -1,0 +1,17 @@
+{
+  "provenance":"Codex visual review of actual rural input RGB. NPC lower body is hidden by player; mask bottom is not a foot contact. Fixed camera orientation and flat ground remain priors.",
+  "frames":[{
+    "image":"outputs/gta_pi_loop_20261102/rural/input.png",
+    "width":1280,"height":720,"timestamp_sec":0,
+    "camera_translation_bounds":[[-2,2],[-1,1],[-2,2]],
+    "static_landmarks":[
+      {"id":"near_utility_pole","local_fraction":[0,-0.5,0],"pixel":[1038,286]},
+      {"id":"palm_left_trunk","local_fraction":[0,-0.5,0],"pixel":[503,222]},
+      {"id":"palm_right_trunk","local_fraction":[0,-0.5,0],"pixel":[913,219]}
+    ],
+    "actor_roots":[
+      {"id":"player","pixel":[570,617],"contact_visibility":"visible","support_plane":{"normal":[0,1,0],"offset":0}},
+      {"id":"npc_ahead","pixel":[591,382],"contact_visibility":"occluded"}
+    ]
+  }]
+}

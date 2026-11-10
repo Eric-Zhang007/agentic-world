@@ -1,0 +1,14 @@
+{
+  "review_method": "Direct visual inspection of four paired RGB/proxy frames per candidate, not full-video certification",
+  "training_ready": false,
+  "reviews": [
+    {"sheet": "00.jpg", "decision": "FURTHER_OBJECT_REVIEW", "finding": "Blue/yellow subject appearance persists in sampled frames. Reference red subject has major horizontal projection discrepancy. Running limb motion is not represented by upright proxy."},
+    {"sheet": "01.jpg", "decision": "VEHICLE_ONLY_CANDIDATE", "finding": "Night vehicle is visible; proxy exposes seated occupants that RGB vehicle body obscures. Do not use occupant proxy presence as visible appearance evidence."},
+    {"sheet": "02.jpg", "decision": "AIRCRAFT_ONLY_CANDIDATE", "finding": "Aircraft is a wireframe box in proxy with tiny pilot visible through it. RGB aircraft occludes pilot. Box is a coarse condition, not segmentation truth."},
+    {"sheet": "03.jpg", "decision": "STATE_TRANSITION_DIAGNOSTIC", "finding": "Standing and downed character states change across sampled frames. Fine pose and fence transparency differ between RGB and proxy. Historical pose must not be treated as current state."},
+    {"sheet": "04.jpg", "decision": "VEHICLE_ONLY_CANDIDATE", "finding": "Van appearance persists across sampled views. Occupants are visible in proxy but occluded in RGB; small bottom-right watermark exists."},
+    {"sheet": "05.jpg", "decision": "STATE_TRANSITION_DIAGNOSTIC", "finding": "Character falls and climbs onto vehicle. Proxy coarse poses differ from RGB limb/contact states. Driver shown as visible proxy should not imply unobstructed RGB evidence."},
+    {"sheet": "06.jpg", "decision": "FURTHER_OBJECT_REVIEW", "finding": "Two main character appearances persist. Running subject proxy pose differs; building/ground broadly correspond but exact geometry is not verified. Bottom-right watermark exists."},
+    {"sheet": "07.jpg", "decision": "REJECT_FULL_FRAME_PAIR", "finding": "Large near-camera red proxy body blocks much of image while corresponding RGB has no such foreground body. Reject this candidate as full-frame positive control pair; projection/visibility implementation cause remains unverified."}
+  ]
+}

@@ -1,0 +1,4 @@
+.godot/
+runtime/
+validation/
+__pycache__/

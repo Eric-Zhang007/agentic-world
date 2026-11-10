@@ -1,0 +1,7 @@
+{
+  "cases": [
+    {"id":"urban","scene":"outputs/local_image_extension_20261109/urban/scene.json","perception":"outputs/local_fresh_sam_20261109/00/result.json","mapping":{"player":"player","npc":"npc","foreground_lamp":"foreground_lamp","parking_booth":"parking_booth"}},
+    {"id":"rural","scene":"outputs/local_landmark_fit_20261109/rural/scene.json","perception":"outputs/local_rural_sam_20261110/00/result.json","mapping":{"player":"player","npc":"npc_ahead","near_utility_pole":"near_utility_pole","palm_left_trunk":"palm_left_trunk","palm_right_trunk":"palm_right_trunk","gun_shop":"gun_store"}},
+    {"id":"garage","scene":"outputs/local_garage_visibility_fix_20261110/scene.json","perception":"outputs/local_fresh_sam_20261109/01/result.json","mapping":{"player":"player","npc":"npc","left_facade":"left_facade","bollard":"bollard"}}
+  ]
+}

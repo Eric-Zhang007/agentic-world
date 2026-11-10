@@ -1,0 +1,33 @@
+{
+  "provenance": "Approximate Codex visual annotations of real later RGB frames, not ground truth; ground plane and fixed rotation are hypotheses",
+  "frames": [
+    {
+      "image": "outputs/local_case_diagnostic_20261108/maintenance_inputs/case_03/step_01/input.png",
+      "width":1280,"height":720,"timestamp_sec":4.532128963,
+      "camera_translation_bounds":[[-2,2],[-1,1],[-2,2]],
+      "static_landmarks":[
+        {"id":"lamp_base","local_fraction":[0,-0.5,0],"pixel":[251,498]},
+        {"id":"hydrant","local_fraction":[0,-0.5,0],"pixel":[357,476]},
+        {"id":"sign_post","local_fraction":[0,-0.5,0],"pixel":[413,458]}
+      ],
+      "actor_roots":[
+        {"id":"player","pixel":[558,637],"contact_visibility":"visible","support_plane":{"normal":[0,1,0],"offset":0}},
+        {"id":"npc","pixel":[805,405],"contact_visibility":"visible","support_plane":{"normal":[0,1,0],"offset":0}}
+      ]
+    },
+    {
+      "image": "outputs/local_case_diagnostic_20261108/maintenance_inputs/case_03/step_02/input.png",
+      "width":1280,"height":720,"timestamp_sec":9.055677219,
+      "camera_translation_bounds":[[-2,2],[-1,1],[-2,2]],
+      "static_landmarks":[
+        {"id":"lamp_base","local_fraction":[0,-0.5,0],"pixel":[248,501]},
+        {"id":"hydrant","local_fraction":[0,-0.5,0],"pixel":[354,477]},
+        {"id":"sign_post","local_fraction":[0,-0.5,0],"pixel":[410,458]}
+      ],
+      "actor_roots":[
+        {"id":"player","pixel":[558,637],"contact_visibility":"visible","support_plane":{"normal":[0,1,0],"offset":0}},
+        {"id":"npc","pixel":[1055,452],"contact_visibility":"visible","support_plane":{"normal":[0,1,0],"offset":0}}
+      ]
+    }
+  ]
+}

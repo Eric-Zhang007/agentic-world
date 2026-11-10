@@ -1,0 +1,18 @@
+{
+  "episode_id": "ep_20260921_124218_450d",
+  "object_id": "3574744230133772",
+  "reviewer": "codex_visual_inspection",
+  "scope": "Eight sparse RGB/proxy pairs, not continuous action verification",
+  "observations": [
+    {"frame": 780, "door_visible_state": "visible_nearside_door_closed", "appearance": "dark blue coupe", "comment": "Visible side profile; no claim about occluded door."},
+    {"frame": 840, "door_visible_state": "visible_nearside_door_open", "appearance": "dark blue coupe", "comment": "Red-shirt actor beside open door; entry action in progress."},
+    {"frame": 900, "door_visible_state": "visible_nearside_door_open", "appearance": "dark blue coupe", "comment": "Red-shirt actor leaning into vehicle."},
+    {"frame": 960, "door_visible_state": "unknown", "appearance": "dark blue coupe", "comment": "Rear view; do not infer all door states."},
+    {"frame": 1020, "door_visible_state": "at_least_one_door_open", "appearance": "dark blue coupe", "comment": "Actor interaction near car; original door field is still null."},
+    {"frame": 1080, "door_visible_state": "visible_nearside_door_open", "appearance": "dark blue coupe", "comment": "Actor on ground beside vehicle; only sampled state verified."},
+    {"frame": 1200, "door_visible_state": "unknown", "appearance": "dark blue coupe", "comment": "Vehicle departing; detailed door state not resolved at this scale."}
+  ],
+  "reference_policy": "Historical body color/model can remain useful. Historical door state and occupant relation cannot be copied unconditionally into later targets.",
+  "training_status": "audit_only_not_positive_pair",
+  "reason": "Proxy and source state omit door articulation. Manual RGB observations must not be retroactively treated as original world facts or historical input before their observation time."
+}

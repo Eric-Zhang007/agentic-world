@@ -1,0 +1,13 @@
+{
+  "source_package": "near_camera_diagnostic_20261018",
+  "agent": "agent_001",
+  "segment": "segment_00089",
+  "reviewed_frames": [840, 1320],
+  "entity_id": "3574744230150195",
+  "measured_geometry": "CAMERA_INSIDE_OBB at both reviewed frames",
+  "visual_finding": "Large red proxy geometry covers substantial image area without corresponding foreground character occlusion in RGB.",
+  "decision": "REJECT_REVIEWED_FULL_FRAME_PAIRS",
+  "cause_hypothesis": "Source RGB and proxy may have different near-camera or local-character visibility policies. Renderer implementation has not been inspected; hypothesis is not established.",
+  "scope": "Two sampled frames, not a full-clip review. The one-frame target export is diagnostic, not a training clip.",
+  "training_ready": false
+}

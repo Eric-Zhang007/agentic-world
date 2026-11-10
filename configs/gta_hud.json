@@ -1,0 +1,7 @@
+{
+  "name": "ep_20260812_090725_f8a5_agent_001",
+  "scope": "Manually inspected agent_001 first40s only; agent_000 additionally has a developer console.",
+  "rectangles_normalized": [[0.0, 0.765, 0.195, 1.0], [0.87, 0.0, 1.0, 0.05]],
+  "reference_fill": "opencv_telea_visual_only_not_evidence",
+  "max_observation_invalid_fraction": 0.0
+}

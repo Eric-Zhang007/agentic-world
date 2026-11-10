@@ -1,0 +1,15 @@
+{
+  "width":1280,"height":720,
+  "provenance":"Approximate Codex source annotations from actual garage video at encoded 1.0s; fixed inferred geometry, no GT camera",
+  "bounds":[[-2,2],[-1,1],[-2,2],[-15,15],[-15,15],[-10,10]],
+  "landmarks":[
+    {"id":"bollard","local_fraction":[0,-0.5,0],"pixel":[358,521]},
+    {"id":"bollard","local_fraction":[0,0.5,0],"pixel":[354,374]},
+    {"id":"left_jamb","local_fraction":[0,-0.5,0],"pixel":[453,512]},
+    {"id":"right_jamb","local_fraction":[0,-0.5,0],"pixel":[1093,648]}
+  ],
+  "heldout":[
+    {"id":"rear_door","local_fraction":[0,-0.5,0],"pixel":[908,359]},
+    {"id":"rear_door","local_fraction":[0,0.5,0],"pixel":[908,247]}
+  ]
+}

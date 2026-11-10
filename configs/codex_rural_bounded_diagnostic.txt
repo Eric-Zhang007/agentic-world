@@ -1,0 +1,17 @@
+Perform one bounded real diagnostic, not a plan. Use server tools yourself.
+Read outputs/gta_pi_loop_20261102/rural/input.png with view_image.
+Inspect outputs/codex_construction_bench_20261104/rural/proposal/candidate/scene.json
+and report.json. Do not read old GPT scenes or dataset ground truth.
+Use a NEW outputs/codex_rural_diagnostic_20261105 directory for results.
+Render the existing candidate using .venv/bin/python -m whitebox.godot.render,
+with native camera intrinsics width/height multiplied by 4 (at most 4096).
+Use env PYTHONPATH=/home/star/agentic_world. Reuse existing Godot and model assets.
+Inspect camera.png and overview.png with view_image, compare to source RGB.
+Read the relevant renderer/catalog only if needed to distinguish intended coarse
+GTA human parts from bugs. Save findings.json with concrete observed discrepancies,
+suspected causes separately from confirmed causes, artifact paths and stage timing.
+Do not claim a single-view size error proves wrong metric geometry. Do not generate
+H3, modify worlds, call Pi/another model, or install dependencies. This task is
+only a bounded render-and-inspect diagnostic. Complete it and finish; no scene edits
+or broad repository scans in this run. If rendering fails, save exact error and
+one focused diagnosis instead of reporting successful visual inspection.

@@ -1,0 +1,10 @@
+{
+  "image": "/home/star/agentic_world/outputs/gta_pi_loop_20261102/rural/input.png",
+  "reconstruction": "/home/star/agentic_world/outputs/geometry_proposals/rural_same_image_20261104/reconstruction.npz",
+  "perception": "/home/star/agentic_world/outputs/geometry_proposals/rural_merged_passes_20261104/result.json",
+  "output": "/home/star/agentic_world/outputs/geometry_proposals/rural_refined_20261104",
+  "gpu": "2",
+  "device": "cuda:0",
+  "actor_height_prior": 1.7,
+  "plane_threshold": 0.005
+}

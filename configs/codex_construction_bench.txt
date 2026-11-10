@@ -1,0 +1,37 @@
+Execute a real whitebox construction benchmark as the SERVER CODEX agent.
+Do not run Pi or another model API. Do not render H3. Use local perception and
+VGGT tools and Godot directly. Work in outputs/codex_construction_bench_20261104.
+Create this new directory and preserve existing experiments and accepted worlds.
+First read docs/geometry_pipeline.md and whitebox/world.py and assets/gta/catalog.json.
+The three input RGB images are outputs/gta_pi_loop_20261102/{rural,urban,harbor}/input.png.
+Do not read those directories' scenes, databases, reports, calibration or previous
+answers. Only their input.png is permitted. No dataset evaluation references.
+
+For each case independently:
+1. Inspect RGB. Call whitebox.geometry_pipeline.propose from Python or via the
+existing world_tools.py JSON stdin protocol. These are deterministic tools, not Pi.
+For rural you may reuse reconstruction at outputs/geometry_proposals/rural_same_image_20261104/reconstruction.npz
+and perception at outputs/geometry_proposals/rural_merged_passes_20261104/result.json.
+For urban/harbor run fresh reconstruction/perception using cached model weights.
+Use gpu=2, actor_height_prior=1.7, plane_threshold=0.005. Inspect cached model
+environments in existing geometry configs if the default interpreter fails.
+2. Inspect source RGB, masks, candidate evidence and rendered camera/overview.
+3. Author corrections yourself in NEW proposal scene JSON files. Preserve input
+evidence. Fix dominant layout, actor size, ground support and foreground landmarks;
+use existing coarse GTA assets, no detailed joint animation. Model hidden geometry
+only as inferred or agent-created, not observed. Do not blindly accept VGGT depth.
+4. Render and visually inspect up to three revisions. Check schema and available
+ground/body geometry validation. Do not force flags to pass validation.
+5. Save scene_before.json, scene_after.json, report.json, comparison.jpg. Report
+actual tool calls and stage times, source-to-projection landmark discrepancies,
+remaining errors, and ready_for_motion (true/false). Separate measured errors from
+visual estimates. Schema validity is not image alignment. Reuse actual Godot
+camera projection conventions if writing screen-space measurements.
+6. Do not initialize or overwrite authoritative worlds. This benchmark measures
+candidate construction only; maintenance will use later sequential RGB separately.
+
+Run all three cases to completion, not just a plan. Fix implementation failures
+when needed with focused changes and regression tests. A failed case must retain
+its logs and explicit failure rather than fabricated results. Do not modify model
+weights, install over existing H3 environments, or download duplicate weights.
+Finish with summary.json covering each case's real result, runtime and artifacts.

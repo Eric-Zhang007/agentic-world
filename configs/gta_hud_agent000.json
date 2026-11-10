@@ -1,0 +1,7 @@
+{
+  "name": "ep_20260812_090725_f8a5_agent_000",
+  "scope": "Conservative console mask for inspected first40s; not a universal HUD detector.",
+  "rectangles_normalized": [[0.0, 0.0, 1.0, 0.34], [0.0, 0.765, 0.195, 1.0]],
+  "reference_fill": "opencv_telea_visual_only_not_evidence",
+  "max_observation_invalid_fraction": 0.0
+}

@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Whitebox Controls</title><style>
+*{box-sizing:border-box}body{margin:0;background:#181c1b;color:#e8eeea;font:14px system-ui,sans-serif;letter-spacing:0;height:100dvh;display:flex;flex-direction:column}
+header{min-height:54px;flex-shrink:0;display:flex;gap:12px;align-items:center;padding:8px 16px;flex-wrap:wrap;background:#252b28}
+h1{font-size:17px;margin:0 auto 0 0;font-weight:600}button{font:inherit;padding:7px 12px;border:1px solid #65716a;border-radius:4px;background:#343e38;color:inherit;cursor:pointer}
+input{min-width:150px;width:260px;max-width:100%;font:inherit;background:#18221c;color:#fff;border:1px solid #65716a;border-radius:4px;padding:8px}#live{display:none;gap:6px;align-items:center;flex-wrap:wrap}#live.enabled{display:flex}
+button:hover{background:#46584c}button:disabled{opacity:.45;cursor:default}#stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#101312}
+canvas{display:block;touch-action:none;outline:none}#accepted-video{max-width:100%;max-height:100%;display:none}footer{height:54px;flex-shrink:0;padding:8px 16px;display:flex;align-items:center;gap:16px;overflow:hidden}#status{overflow-wrap:anywhere;flex:1;font-size:12px}#clock{font-variant-numeric:tabular-nums;white-space:nowrap;color:#b8d9c3}
+@media(max-width:600px){header{gap:6px;padding:8px}h1{width:100%;font-size:15px}button{padding:5px 9px}footer{padding:6px 8px}}
+</style></head><body>
+<header><h1>Whitebox · 键鼠预览</h1><button id="start" title="WASD 移动；鼠标拖动转视角；Shift 跑步；空格跳跃；C 蹲下或站起；X 站起；F 挥棍">开始</button><button id="pause" disabled>暂停</button><button id="reset">重置</button><button id="export" title="在下一可导出的 H3 帧数边界保存，不提交世界历史">导出计划</button><div id="live"><button id="render-keys">生成这一段</button><input id="action-prompt" aria-label="Action prompt" placeholder="输入动作"><button id="render-prompt">执行动作</button></div></header>
+<main id="stage"><video id="accepted-video" controls playsinline></video></main><footer><span id="clock">0.000 s · 0 ticks</span><span id="status">载入场景…</span><button id="view-whitebox">白模</button><button id="view-video" disabled>已接受视频</button></footer>
+<script type="module" src="/app.js"></script></body></html>

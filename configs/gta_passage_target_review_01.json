@@ -1,0 +1,17 @@
+{
+  "reviewed_count": 55,
+  "all_sheets_inspected": true,
+  "rejected": {
+    "3": "Initial oversized proxy head blocks background absent in RGB",
+    "4": "Large initial proxy wall occludes a background visible in RGB",
+    "6": "Airport stairs and aircraft replaced by large foreground proxy planes",
+    "8": "Large later proxy planes obscure the visible aircraft scene",
+    "14": "Initial airport stair scene obscured by oversized proxy slab",
+    "24": "Map/menu overlay occupies target frames",
+    "32": "Later large proxy plane disagrees with visible aircraft; matches earlier rejected scene case",
+    "34": "Oversized red proxy body fills foreground without corresponding RGB occlusion",
+    "48": "Fence climbing produces large opaque proxy slab absent from RGB",
+    "49": "Large vegetation proxy boxes obscure foreground across sampled frames",
+    "54": "Initial oversized proxy head obscures otherwise visible yard background"
+  }
+}

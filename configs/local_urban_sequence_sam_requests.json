@@ -1,0 +1,16 @@
+{
+  "images":[
+    {"image":"outputs/local_case_diagnostic_20261108/maintenance_inputs/case_03/step_01/input.png","evidence":"Codex manual boxes on actual later urban RGB; no GT masks or automatic discovery","objects":[
+      {"id":"player","category":"person","bbox_xyxy":[507,295,619,643]},
+      {"id":"npc","category":"person","bbox_xyxy":[785,298,878,413]},
+      {"id":"foreground_lamp","category":"pole","bbox_xyxy":[202,0,300,502]},
+      {"id":"parking_booth","category":"building","bbox_xyxy":[0,189,313,447]}
+    ]},
+    {"image":"outputs/local_case_diagnostic_20261108/maintenance_inputs/case_03/step_02/input.png","evidence":"Codex manual boxes on actual later urban RGB; no GT masks or automatic discovery","objects":[
+      {"id":"player","category":"person","bbox_xyxy":[505,295,620,643]},
+      {"id":"npc","category":"person","bbox_xyxy":[982,292,1085,460]},
+      {"id":"foreground_lamp","category":"pole","bbox_xyxy":[198,0,296,504]},
+      {"id":"parking_booth","category":"building","bbox_xyxy":[0,189,309,448]}
+    ]}
+  ]
+}

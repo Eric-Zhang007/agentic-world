@@ -1,0 +1,18 @@
+{
+  "images":[
+    {"image":"outputs/gta_pi_loop_20261102/urban/input.png", "evidence":"Codex manual regions from source RGB, no GT masks",
+     "objects":[
+       {"id":"player","category":"person","bbox_xyxy":[510,295,613,641]},
+       {"id":"npc","category":"person","bbox_xyxy":[719,307,828,440]},
+       {"id":"foreground_lamp","category":"pole","bbox_xyxy":[250,0,347,498]},
+       {"id":"parking_booth","category":"building","bbox_xyxy":[0,216,372,440]}
+     ]},
+    {"image":"outputs/construction_bench_20261104/inputs/case_06/input.png", "evidence":"Codex manual regions from source RGB, no GT masks",
+     "objects":[
+       {"id":"player","category":"person","bbox_xyxy":[414,289,645,720]},
+       {"id":"npc","category":"person","bbox_xyxy":[610,255,668,410]},
+       {"id":"left_facade","category":"wall","bbox_xyxy":[0,0,525,404]},
+       {"id":"bollard","category":"bollard","bbox_xyxy":[379,345,412,499]}
+     ]}
+  ]
+}

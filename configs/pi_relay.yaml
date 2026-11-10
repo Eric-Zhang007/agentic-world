@@ -1,0 +1,7 @@
+agent:
+  base_url: https://orouter.net/v1
+  model: gpt-6-sol
+  api: openai-responses
+  reasoning_effort: medium
+  env_key: RELAY_USER_TOKEN
+  api_key: REPLACE_WITH_API_KEY

@@ -1,0 +1,17 @@
+{
+  "width": 1280, "height": 720,
+  "provenance": "Codex visually annotated source RGB, approximate ground-contact centers; no dataset geometry used",
+  "landmarks": [
+    {"id":"lamp_base","local_fraction":[0,-0.5,0],"pixel":[300,491]},
+    {"id":"hydrant","local_fraction":[0,-0.5,0],"pixel":[401,474]},
+    {"id":"sign_post","local_fraction":[0,-0.5,0],"pixel":[456,457]}
+  ],
+  "parameters": [
+    {"id":"lamp_base","field":"position","axis":0,"bounds":[-8,-0.8],"linked_ids":["foreground_lamp"]},
+    {"id":"lamp_base","field":"position","axis":2,"bounds":[-8,1],"linked_ids":["foreground_lamp"]},
+    {"id":"hydrant","field":"position","axis":0,"bounds":[-8,-0.8]},
+    {"id":"hydrant","field":"position","axis":2,"bounds":[-10,1]},
+    {"id":"sign_post","field":"position","axis":0,"bounds":[-8,-0.5],"linked_ids":["sign_panel"]},
+    {"id":"sign_post","field":"position","axis":2,"bounds":[-10,1],"linked_ids":["sign_panel"]}
+  ]
+}

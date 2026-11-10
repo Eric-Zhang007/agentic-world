@@ -1,0 +1,22 @@
+{
+  "annotation_source": "assistant visual inspection of supplied original RGB frames; approximate visible bboxes",
+  "scope": "person only; other categories unannotated, not negatives",
+  "geometry_ground_truth": false,
+  "coordinate_space": "actual sampled JPEG pixels, not source-video metadata resolution",
+  "images": [
+    {
+      "file": "000.jpg", "width": 768, "height": 432,
+      "objects": [
+        {"annotation_id": "red_person", "category": "person", "bbox": [212, 136, 350, 432], "truncated": true},
+        {"annotation_id": "blue_person", "category": "person", "bbox": [389, 108, 449, 335], "truncated": false}
+      ]
+    },
+    {
+      "file": "015.jpg", "width": 768, "height": 432,
+      "objects": [
+        {"annotation_id": "red_person", "category": "person", "bbox": [245, 142, 343, 432], "truncated": true},
+        {"annotation_id": "blue_person", "category": "person", "bbox": [487, 108, 586, 369], "truncated": false}
+      ]
+    }
+  ]
+}

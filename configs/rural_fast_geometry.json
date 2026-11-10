@@ -1,0 +1,8 @@
+{
+  "image": "/home/star/agentic_world/outputs/gta_pi_loop_20261102/rural/input.png",
+  "output": "/home/star/agentic_world/outputs/geometry_proposals/rural_same_image_20261104",
+  "gpu": "2",
+  "device": "cuda:0",
+  "actor_height_prior": 1.7,
+  "plane_threshold": 0.005
+}

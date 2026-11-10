@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+.runtime/
+node_modules/
+outputs/
+input_data/
+*.safetensors
+*.pth
+*.pt
+*.sqlite

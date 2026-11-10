@@ -1,0 +1,34 @@
+{
+  "reviewer": "Codex visual inspection in this session",
+  "scope": "All 45 four-panel frame comparisons at contact-sheet resolution; not target videos yet",
+  "groups": [
+    {"ids": [19], "scene": "urban_intersection", "lighting": "night", "site": "city_junction"},
+    {"ids": [23,24], "scene": "service_station", "lighting": "day", "site": "fuel_station"},
+    {"ids": [28], "scene": "coast_parking", "lighting": "day", "site": "coast_parking"},
+    {"ids": [30,37,39,40,48], "scene": "airport", "lighting": "day", "site": "airport_apron"},
+    {"ids": [62], "scene": "residential_street", "lighting": "day", "site": "hillside_houses"},
+    {"ids": [71], "scene": "rural_settlement", "lighting": "dusk", "site": "desert_houses"},
+    {"ids": [81,84,85], "scene": "rural_road", "lighting": "night", "site": "rural_shop_road"},
+    {"ids": [90], "scene": "industrial_street", "lighting": "night", "site": "railside_road"},
+    {"ids": [96], "scene": "construction", "lighting": "day", "site": "construction_ramp"},
+    {"ids": [105], "scene": "residential_yard", "lighting": "day", "site": "suburban_yard"},
+    {"ids": [113,114,115], "scene": "hillside_road", "lighting": "dusk", "site": "hillside_curve"},
+    {"ids": [130,131,132], "scene": "industrial_street", "lighting": "night", "site": "warehouse_lane"},
+    {"ids": [136,140], "scene": "service_station", "lighting": "day", "site": "rural_service_station"},
+    {"ids": [156,158], "scene": "urban_street", "lighting": "day", "site": "city_building_front"},
+    {"ids": [161,163,165,166], "scene": "highway_underpass", "lighting": "day", "site": "city_underpass"},
+    {"ids": [183,184], "scene": "urban_parking", "lighting": "day", "site": "fenced_parking"},
+    {"ids": [192,193], "scene": "urban_road", "lighting": "dusk", "site": "city_evening_road"},
+    {"ids": [201,202,203,209,210,213], "scene": "coastal_road", "lighting": "day", "site": "coastal_highway"},
+    {"ids": [220,221], "scene": "residential_street", "lighting": "day", "site": "suburban_junction"},
+    {"ids": [227], "scene": "rural_settlement", "lighting": "day", "site": "desert_road"},
+    {"ids": [228], "scene": "rooftop", "lighting": "dusk", "site": "desert_rooftop"}
+  ],
+  "exclusions": {
+    "scene_pair_00023": "Target proxy foreground is dominated by a giant close-up blue body block; unsuitable default whitebox conditioning.",
+    "scene_pair_00039": "Reference and target proxies have severe foreground occlusion and lack the visible airplane/staircase layout.",
+    "scene_pair_00040": "Reference and target proxies have severe foreground occlusion and lack the visible airplane/staircase layout.",
+    "scene_pair_00048": "Day-to-night reference transition has no explicit target lighting condition; retain as diagnostic, exclude default appearance-preservation training.",
+    "scene_pair_00140": "Large gray proxy wall fills most of both views despite visible open background in RGB."
+  }
+}

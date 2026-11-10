@@ -1,0 +1,12 @@
+[
+  {
+    "label": "layout_anchor_strong",
+    "controls": [{"path": "/home/star/agentic_world/outputs/world_controls_20261008/controls/layout.npz", "strength": 1.0, "end": 1.0}],
+    "cache_threshold": 0
+  },
+  {
+    "label": "layout_anchor_soft",
+    "controls": [{"path": "/home/star/agentic_world/outputs/world_controls_20261008/controls/layout.npz", "strength": 0.35, "end": 0.65}],
+    "cache_threshold": 0
+  }
+]

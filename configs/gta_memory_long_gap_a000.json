@@ -1,0 +1,17 @@
+{
+  "episode_id": "ep_20260921_124218_450d",
+  "agent_id": "agent_000",
+  "segment": "segment_00000",
+  "reference_frame": 32,
+  "target_frames": [480, 503],
+  "dataset_entity_id": "3574744230133761",
+  "category": "person",
+  "reference_rgb_bbox_xyxy": [460, 310, 632, 677],
+  "reviewer": "codex_visual_inspection",
+  "review_scope": "All 24 RGB frames inspected in a sheet; reference and first/last projected whitebox comparisons inspected. Longer reference age, not verified disappearance-and-revisit.",
+  "visible_appearance": "A curly dark-haired person wearing a blue torso shirt with yellow sleeves, dark trousers and brown shoes.",
+  "generation_note": "This object is the blue agent_000 proxy; preserve its clothing identity while letting the target motion change the pose. Rigid limbs are not exact gait supervision.",
+  "appearance_continuity": "Visible clothing identity remains consistent across the reference and target. Background differs because the camera and person moved.",
+  "excluded_objects": "Other entities are not reviewed reference matches.",
+  "limitations": ["One-second target clip and approximately 19-second reference age.", "Coarse layout only; no pixel-accurate alignment or gait claim.", "Reference crop is approximate, not segmented."]
+}

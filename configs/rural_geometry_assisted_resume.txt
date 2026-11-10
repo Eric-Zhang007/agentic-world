@@ -1,0 +1,9 @@
+Continue the interrupted tool-assisted geometry correction experiment in
+/home/star/agentic_world/outputs/rural_geometry_assisted_20261104.
+The previous model request failed with billing_error after geometry_propose
+completed and the original reconstruction report was read. No corrected scene
+or final evaluation was produced. Reuse the existing proposal/proposal.json and
+its perception, reconstruction and preview artifacts; do not rerun geometry_propose
+into an existing directory. Read configs/rural_geometry_assisted_task.txt for the
+original deliverables and continue the same Pi session. Do not change old worlds
+or invoke H3. Produce actual before/after evidence for your own scene corrections.

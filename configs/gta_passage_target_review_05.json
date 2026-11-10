@@ -1,0 +1,9 @@
+{
+  "reviewed_count": 15,
+  "all_sheets_inspected": true,
+  "rejected": {
+    "0": "Aerial city and terrain mostly missing from whitebox background",
+    "3": "Large opaque proxy block obscures garden background visible in RGB",
+    "11": "Underground scene absent from whitebox; blank background and floating actors"
+  }
+}

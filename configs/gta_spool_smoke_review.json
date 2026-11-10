@@ -1,0 +1,6 @@
+{
+  "reviewed_count": 5,
+  "all_sheets_inspected": true,
+  "rejected": {},
+  "notes": "Inspected both target sheets and comparisons f000600/f001080. Desert roadside shop, road and poles correspond at coarse proxy resolution; vegetation is simplified. Smoke samples are not separately added to the production release."
+}

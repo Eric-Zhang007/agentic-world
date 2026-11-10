@@ -1,0 +1,21 @@
+{
+  "evidence":[
+    "Source RGB has a visible NPC and workbench inside the garage",
+    "Coarse visibility diagnostic identifies left_wall blocking NPC; validate_geometry also reports NPC/left_wall intersection",
+    "Source SAM bollard mask is at x381..413,y351..498; old proxy is displaced and blocked by low_wall"
+  ],
+  "uncertainty":[
+    "Room is modeled wider behind its entrance; hidden extents are an inferred completion, not a measured structure",
+    "Bollard support uses y=0 and the current inferred camera",
+    "Actor scales and hidden geometry remain uncertain; no accepted history is modified"
+  ],
+  "edits":[
+    {"id":"left_wall","position":[6.4,2,3.2],"evidence":["Recessed side wall must not intersect visible NPC or workbench"]},
+    {"id":"back_wall","position":[1.65,2,6.4],"size":[9.5,4,0.2],"evidence":["Connect the expanded interior side boundaries"]},
+    {"id":"roof","position":[1.65,4,3.2],"size":[9.5,0.2,6.4],"evidence":["Keep roof consistent with interior wall extent"]},
+    {"id":"workbench","position":[5.4904141518459,0.48,3.4],"evidence":["Workbench cannot have its center below visible ground; bottom placed at y=0"]},
+    {"id":"tool_cabinet","position":[2.8504131739389793,0.7,5.8],"evidence":["Keep cabinet on floor rather than intersecting it"]},
+    {"id":"rear_door","position":[1.3662381796848857,1,6.25],"evidence":["Door base follows floor prior"]},
+    {"id":"bollard","position":[2.10377858,0.55,-1.38582784],"evidence":["Ground ray through visible SAM bottom center at 397,497; prior height retained"]}
+  ]
+}

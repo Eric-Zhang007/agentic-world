@@ -1,0 +1,8 @@
+{
+  "reviewed_count": 24,
+  "all_sheets_inspected": true,
+  "rejected": {
+    "19": "Interior shop counters and furnishings absent from proxy; insufficient background geometry correspondence.",
+    "22": "Close-camera interval has enlarged proxy head occluding a large image region inconsistent with RGB view."
+  }
+}

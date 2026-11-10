@@ -1,0 +1,16 @@
+{
+  "width":1280,"height":720,
+  "provenance":"Approximate Codex visual annotations; actor height is an inferred prior, not measured geometry",
+  "bounds":[[-2,2],[-1,1],[-2,2],[-15,15],[-15,15],[-15,15]],
+  "landmarks":[
+    {"id":"lamp_base","local_fraction":[0,-0.5,0],"pixel":[300,491]},
+    {"id":"hydrant","local_fraction":[0,-0.5,0],"pixel":[401,474]},
+    {"id":"sign_post","local_fraction":[0,-0.5,0],"pixel":[456,457]},
+    {"id":"player","local_fraction":[0,0,0],"pixel":[556,635]},
+    {"id":"player","local_fraction":[0,1,0],"pixel":[552,301]}
+  ],
+  "heldout":[
+    {"id":"npc","local_fraction":[0,0,0],"pixel":[792,434]},
+    {"id":"npc","local_fraction":[0,1,0],"pixel":[805,310]}
+  ]
+}

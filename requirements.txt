@@ -1,0 +1,13 @@
+# Use the existing H3 environment read-only as documented in README.
+numpy
+scipy
+pillow
+pyyaml
+requests
+torch
+torchvision
+transformers
+av
+opencv-python-headless
+pyarrow
+pydantic

@@ -1,0 +1,5 @@
+workspace: /mnt/hdd/gta_source_rebuild
+source_root: /mnt/hdd/gta_source_rebuild/source
+outputs: /mnt/hdd/gta_source_rebuild/rendered
+render:
+  workers: 1

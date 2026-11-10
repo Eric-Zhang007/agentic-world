@@ -1,0 +1,9 @@
+{
+  "reviewed_count": 23,
+  "all_sheets_inspected": true,
+  "rejected": {
+    "7": "Opaque proxy slab replaces visible oilfield machinery and much of the background",
+    "9": "Opaque fence proxy blocks visible terrain across several sampled frames",
+    "18": "Large console/HUD text overlay across target frames without a reviewed loss mask"
+  }
+}

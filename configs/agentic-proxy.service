@@ -1,0 +1,12 @@
+[Unit]
+Description=Agentic world local inference API proxy
+After=network-online.target
+
+[Service]
+ExecStart=%h/.local/bin/mihomo -d %h/.config/agentic-proxy
+Restart=on-failure
+RestartSec=5
+UMask=0077
+
+[Install]
+WantedBy=default.target

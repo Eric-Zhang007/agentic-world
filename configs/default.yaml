@@ -1,0 +1,37 @@
+world_db: /home/star/agentic_world/data/world.sqlite
+observation_db: /home/star/agentic_world/data/observations.sqlite
+output_root: /home/star/agentic_world/outputs
+agent:
+  base_url: https://api.happyduoer.com/v1
+  model: gpt-6-astra
+  api_key: REPLACE_WITH_API_KEY
+  timeout: 180
+  max_tool_rounds: 6
+  max_reroll: 3
+renderer:
+  python: /home/star/minimax-h3/.venv/bin/python
+  deploy: /home/star/minimax-h3/deploy
+  repo: /mnt/hdd/DiffSynth-Studio
+  gpus: "2,3"
+  frames: 72
+  fps: 24
+  width: 832
+  height: 480
+  steps: 50
+  seed: 42
+  timeout: 3600
+perception:
+  frame_interval_sec: 5.0
+  detector: IDEA-Research/grounding-dino-tiny
+  segmenter: facebook/sam2.1-hiera-tiny
+  embedding: facebook/dinov2-small
+  device: cuda:0
+  threshold: 0.25
+  categories: [car, person, tree, dog, bicycle, truck, bus, motorcycle, building, traffic light, bench]
+matching:
+  weights: {semantic: 0.35, visual: 0.25, spatial: 0.15, projection: 0.20, temporal: 0.05}
+  max_cost: 0.65
+  ambiguity_margin: 0.05
+  spatial_scale: 5.0
+  projection_scale: 150.0
+  projection_tolerance_px: 80.0

@@ -1,0 +1,4 @@
+This is a minimal gateway/tool-return diagnostic, not a world experiment.
+Run exactly one shell command: printf 'TOOL_RETURN_OK\n'.
+After receiving its result reply exactly TOOL_ROUNDTRIP_OK and finish.
+Do not read files or run any other command.

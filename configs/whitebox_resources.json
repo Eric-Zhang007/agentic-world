@@ -1,0 +1,26 @@
+{
+  "coordinate_system": "Godot right-handed Y-up; X right, Z scene depth; actor forward=[sin(rotation_y),0,cos(rotation_y)]. Angles radians unless named _deg.",
+  "resources": {
+    "terrain": {"parameters": ["size", "resolution", "seed", "height_amplitude", "flatten_radius"], "affordance": "Walkable height surface; seeded hills outside flat central activity area"},
+    "box": {"parameters": ["position", "size", "rotation_y", "color"], "affordance": "Static wall, pillar, plinth, gate lintel, obstacle or prop proxy. Position is center; solid defaults true."},
+    "stairs": {"parameters": ["position", "size", "steps", "rotation_y", "color"], "affordance": "Visible procedural staircase. Collision is conservative bounding box in this version; do not plan climbing yet."},
+    "actor": {"parameters": ["asset_id", "position", "size", "rotation_y", "color", "behavior", "posture_weights", "weapon_angle", "weapon_elevation_deg", "grip"], "affordance": "For GTA use asset_id=gta_human: rigid multipart silhouette, foot-root origin, no limb animation. Posture weights scale its whole height: standing 1, crouched .65, low_guard .4. Rendering and body collision use the same height. This is coarse occupancy, not a skeleton reconstruction. Logical weapon grip remains available."},
+    "gta_vehicle": {"parameters": ["position", "size", "rotation_y", "color"], "affordance": "Use kind=box and asset_id=gta_vehicle. Dataset direction-aware coarse body; center origin. No vehicle dynamics."},
+    "static_geometry": {"parameters": ["path", "collision_path"], "affordance": "Scene-level recorded regional surfaces; visual XYZ/RGB file and physical XYZ triangle file. Replace procedural ground rendering and motion support. Use existing exported assets, not invented file paths. Walking checks 0.35m maximum step, 0.5m maximum drop, 50 degree maximum support slope, and conservative body clearance. No automatic pathfinding."},
+    "staff": {"parameters": ["holder", "length", "size", "color"], "affordance": "Held rigid segment with two world-space endpoints, grip points and sampled contact tests. No unsupported independent hovering weapon."}
+  },
+  "behaviors": {
+    "player": "User action execution",
+    "guard": "Face target, maintain distance, optionally strafe; speed m/s. Active in and out of camera.",
+    "patrol": "Walk between persistent waypoints with retained patrol_index. Active offscreen. Obstacle stops movement; no global pathfinding yet."
+  },
+  "actions": {
+    "move": "delta=[dx,0,dz] up to 4m, duration_sec, criterion. Specify gait=walk/run/crouch and end_velocity=[vx,0,vz]. Trajectory speed limits: walk 2.2m/s, run 4m/s, crouch 1.5m/s. Crouch movement requires completed crouched posture; walk/run requires standing. Tools interpolate root movement and check ground/body clearance. No limb animation.",
+    "posture": "target_posture=standing/crouched/low_guard, duration_sec, criterion. Smooth coarse height transition; cannot stand into a ceiling. Finish deceleration before changing posture. low_guard is four-point support, not prone crawling.",
+    "jump": "delta=[dx,0,dz] up to 4m, flight duration_sec=0.5..1.2, end_velocity=[vx,0,vz], criterion. Standing takeoff; ballistic vertical arc under gravity 9.81m/s2, supported landing and full airborne body clearance. Duration controls jump height, not arbitrary time stretching. Plan takeoff and landing within this segment; airborne clip endpoints unsupported. Horizontal end_velocity can continue into the next move without stopping. Events remain planned until video review.",
+    "sweep": "start_angle_deg,end_angle_deg (e.g. 55,-55), duration_sec, criterion. Weapon azimuth sweeps relative to actor forward at the stored elevation; geometric contact does not automatically cause damage.",
+    "recover": "duration_sec,criterion. Weapon returns to default ready angle 55 degrees.",
+    "wait": "duration_sec,criterion. User holds state; NPC logic keeps executing."
+  },
+  "limits": ["No full physics or damage model", "No climbing, prone crawling, or airborne segment endpoints", "Coarse occupancy does not guarantee natural generated gait", "Initial camera and 3D from one image are inferred, not measured", "A creative unseen addition is AGENT_CREATED, not an observed fact"]
+}

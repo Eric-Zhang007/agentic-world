@@ -1,0 +1,15 @@
+{
+  "images":[{
+    "image":"outputs/geometry_init/urban/perception_target/input.png",
+    "evidence":"Codex source-image regions for cached VGGT compilation; semantic categories explicitly supplied, not discovered by SAM2.",
+    "objects":[
+      {"id":"player","category":"person","bbox_xyxy":[508,293,612,644]},
+      {"id":"npc","category":"person","bbox_xyxy":[714,299,825,443]},
+      {"id":"road","category":"road","bbox_xyxy":[350,440,1279,719]},
+      {"id":"sidewalk","category":"sidewalk","bbox_xyxy":[0,444,485,695]},
+      {"id":"parking_booth","category":"building","bbox_xyxy":[0,196,373,439]},
+      {"id":"left_apartments","category":"building","bbox_xyxy":[347,183,677,334]},
+      {"id":"foreground_lamp","category":"pole","bbox_xyxy":[251,0,345,499]}
+    ]
+  }]
+}
